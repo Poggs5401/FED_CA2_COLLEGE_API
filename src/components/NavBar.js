@@ -55,9 +55,9 @@ const NavBar = ({ authenticated, onAuthenticated }) => {
               <Dropdown.Item as={Link} to="/enrolments">
                 All Enrolments
               </Dropdown.Item>
-              {/* <Dropdown.Item as={Link} to="/lecturers/create">
-                Add a Lecturer
-              </Dropdown.Item> */}
+              <Dropdown.Item as={Link} to="/enrolments/create">
+                Add an Enrolment
+              </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </div>

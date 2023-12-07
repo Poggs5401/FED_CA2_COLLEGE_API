@@ -25,6 +25,7 @@ import EditLecturer from "./lecturers/EditLecturer.js";
 //Import Enrolments
 import AllEnrolments from "./enrolments/AllEnrolments";
 import SingleEnrolment from "./enrolments/SingleEnrolment.js";
+import CreateEnrolment from "./enrolments/CreateEnrolment.js";
 
 
 import Login from "./components/Login.js";
@@ -110,6 +111,8 @@ function App() {
           //Enrolments
           <Route path="/enrolments" element={<AllEnrolments authenticated={authenticated} />} />
           <Route path="/enrolments/:id" element={<SingleEnrolment authenticated={authenticated} />} />
+          <Route path="/enrolments/create" element={<CreateEnrolment authenticated={authenticated} />} />
+
 
 
 
