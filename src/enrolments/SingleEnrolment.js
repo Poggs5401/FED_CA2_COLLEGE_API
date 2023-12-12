@@ -36,15 +36,27 @@ const SingleEnrolment = () => {
       <h2>Enrolment: {id}</h2>
       <div>
         <p>
-          <b>Title:</b>
-          {enrolment.title}
+          <b>Title: </b>
+          {enrolment.lecturer.name}
         </p>
         <p>
-          <b>Description:</b> {enrolment.description}
+          <b>Status:</b> {enrolment.status}
         </p>
+        <p>
+          <b>Course Description:</b> {enrolment.course.description}
+        </p>
+        <h3>Lecturer Contact Details;</h3>
+        <p><b>Address: </b>{enrolment.lecturer.address}</p>
+        <p><b>Phone Number: </b>{enrolment.lecturer.phone}</p>
+        <p><b>Email: </b>{enrolment.lecturer.email}</p>
+
         <br />
         <Link to={`/enrolments/${id}/edit`}>Edit</Link>
-        <DeleteButton id={enrolment.id} resource="enrolments" deleteCallback={() => navigate('/enrolments')} />
+        <DeleteButton
+          id={enrolment.id}
+          resource="enrolments"
+          deleteCallback={() => navigate("/enrolments")}
+        />
       </div>
     </>
   );
